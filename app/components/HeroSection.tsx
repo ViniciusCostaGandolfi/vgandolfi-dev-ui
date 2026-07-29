@@ -65,7 +65,7 @@ export default function HeroSection() {
             <span className="animate-ping absolute inline-flex size-full rounded-full bg-primary opacity-75" />
             <span className="relative inline-flex size-2 rounded-full bg-primary" />
           </span>
-          Available for opportunities
+          Aqui está o pulo do gato 🐱
         </div>
 
         {/* Main heading */}
