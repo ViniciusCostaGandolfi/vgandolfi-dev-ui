@@ -1,0 +1,16 @@
+[
+  {
+    "id": "gradehorarios",
+    "title": "gradehorarios.com.br",
+    "description": "Tool for managing and sharing class schedules",
+    "tags": ["React", "Spring Boot", "PostgreSQL"],
+    "url": "https://gradehorarios.com.br"
+  },
+  {
+    "id": "fazrota",
+    "title": "fazrota.com.br",
+    "description": "Route planning and logistics management platform",
+    "tags": ["Angular", "Spring Boot", "PostgreSQL"],
+    "url": "https://fazrota.com.br"
+  }
+]
