@@ -1,33 +1,87 @@
-const technologies = [
-  "React",
-  "Angular",
-  "TypeScript",
-  "Java",
-  "Spring Boot",
-  "PostgreSQL",
-  "Docker",
+import { useEffect, useRef } from "react";
+
+const highlights = [
+  { label: "Location", value: "Limeira - SP" },
+  { label: "Experience", value: "2+ Years" },
+  { label: "Focus", value: "Full Stack Java" }
 ];
 
 export default function AboutSection() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = contentRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.classList.add("animate-fade-in-up");
+          el.style.opacity = "1";
+          observer.unobserve(el);
+        }
+      },
+      { threshold: 0.1 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section id="about" className="py-20 px-4 bg-base-100">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-          About Me
-        </h2>
-        <p className="text-lg text-base-content/80 leading-relaxed mb-8 text-center max-w-2xl mx-auto">
-          I'm a full-stack developer who enjoys building practical tools that
-          solve real-world problems. With experience across the stack — from
-          crafting responsive frontends with React and Angular to designing
-          robust APIs with Spring Boot — I focus on creating clean, maintainable
-          code that delivers value.
-        </p>
-        <div className="flex flex-wrap justify-center gap-3">
-          {technologies.map((tech) => (
-            <span key={tech} className="badge badge-lg badge-outline">
-              {tech}
-            </span>
-          ))}
+    <section
+      id="about"
+      ref={sectionRef}
+      className="relative py-24 md:py-32 overflow-hidden"
+    >
+      {/* Subtle background decoration */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-primary/[0.03] blur-[100px]" />
+      </div>
+
+      <div className="container mx-auto px-4 max-w-5xl">
+        {/* Section header */}
+        <div className="text-center mb-16">
+          <span className="text-primary font-medium text-sm tracking-widest uppercase">
+            About Me
+          </span>
+          <h2 className="font-display text-3xl md:text-4xl font-bold mt-3">
+            Conheça um pouco da minha{" "}
+            <span className="gradient-text">trajetória</span>
+          </h2>
+          <div className="w-16 h-1 bg-primary/30 rounded-full mx-auto mt-4" />
+        </div>
+
+        {/* Content */}
+        <div
+          ref={contentRef}
+          className="opacity-0"
+        >
+          {/* Professional summary */}
+          <div className="bg-base-200/50 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-base-content/5 mb-10">
+            <p className="text-lg leading-relaxed text-base-content/80">
+              Desenvolvedor Full Stack com foco em ecossistema Java (Spring Boot) e Angular.
+              Experiência em arquiteturas de microsserviços, mensageria e integração de APIs.
+              Vivência em projetos complexos utilizando Design Patterns, DDD, arquitetura
+              orientada a eventos, metodologias ágeis e CI/CD.
+            </p>
+          </div>
+
+          {/* Highlights grid */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {highlights.map((item) => (
+              <div
+                key={item.label}
+                className="group bg-base-200/30 backdrop-blur-sm rounded-xl p-5 border border-base-content/5 text-center hover:border-primary/20 hover:bg-primary/[0.02] transition-all duration-300"
+              >
+                <div className="text-2xl font-display font-bold gradient-text mb-1">
+                  {item.value}
+                </div>
+                <div className="text-sm text-base-content/50 font-medium">
+                  {item.label}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
