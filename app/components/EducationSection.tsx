@@ -4,7 +4,13 @@ const education = [
   {
     title: "Tecnólogo em Análise e Desenvolvimento de Sistemas",
     institution: "UNIVESP (Universidade Estadual Virtual de São Paulo)",
-    period: "Conclusão prevista: 2026",
+    period: "2024 – 2026 (previsão de conclusão)",
+    type: "graduation",
+  },
+  {
+    title: "Engenharia de Produção",
+    institution: "Unicamp",
+    period: "Até 2024 (incompleto)",
     type: "graduation",
   },
 ];
@@ -16,7 +22,7 @@ const certifications = [
 
 const languages = [
   { name: "Português", level: "Nativo" },
-  { name: "Inglês", level: "Intermediário (Leitura técnica)" },
+  { name: "Inglês", level: "Intermediário (leitura técnica e conversação básica)" },
 ];
 
 export default function EducationSection() {
@@ -57,7 +63,7 @@ export default function EducationSection() {
         {/* Section header */}
         <div ref={headerRef} className="opacity-0 text-center mb-16">
           <span className="text-primary font-medium text-sm tracking-widest uppercase">
-            Education & Certifications
+            Educação e certificações
           </span>
           <h2 className="font-display text-3xl md:text-4xl font-bold mt-3">
             Formação e{" "}
@@ -78,25 +84,27 @@ export default function EducationSection() {
               <h3 className="font-display font-bold text-xl">Educação</h3>
             </div>
 
-            {education.map((item) => (
-              <div
-                key={item.title}
-                className="bg-base-200/40 backdrop-blur-sm rounded-xl p-6 border border-base-content/5 hover:border-primary/15 transition-all duration-300"
-              >
-                <div className="flex items-start gap-3">
-                  <div className="mt-1 shrink-0">
-                    <div className="size-3 rounded-full bg-primary/60" />
-                  </div>
-                  <div>
-                    <h4 className="font-display font-semibold text-base">
-                      {item.title}
-                    </h4>
-                    <p className="text-primary text-sm mt-0.5">{item.institution}</p>
-                    <p className="text-base-content/50 text-sm mt-1">{item.period}</p>
+            <div className="space-y-3">
+              {education.map((item) => (
+                <div
+                  key={item.title}
+                  className="bg-base-200/40 backdrop-blur-sm rounded-xl p-6 border border-base-content/5 hover:border-primary/15 transition-all duration-300"
+                >
+                  <div className="flex items-start gap-3">
+                    <div className="mt-1 shrink-0">
+                      <div className="size-3 rounded-full bg-primary/60" />
+                    </div>
+                    <div>
+                      <h4 className="font-display font-semibold text-base">
+                        {item.title}
+                      </h4>
+                      <p className="text-primary text-sm mt-0.5">{item.institution}</p>
+                      <p className="text-base-content/50 text-sm mt-1">{item.period}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
 
           {/* Certifications & Languages */}
@@ -146,7 +154,7 @@ export default function EducationSection() {
                 {languages.map((lang) => (
                   <div
                     key={lang.name}
-                    className="bg-base-200/40 backdrop-blur-sm rounded-xl p-4 border border-base-content/5 flex items-center justify-between"
+                    className="bg-base-200/40 backdrop-blur-sm rounded-xl p-4 border border-base-content/5 flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between"
                   >
                     <span className="font-medium">{lang.name}</span>
                     <span className="text-sm text-base-content/60">{lang.level}</span>

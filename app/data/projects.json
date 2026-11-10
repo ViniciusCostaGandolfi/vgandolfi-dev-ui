@@ -2,15 +2,22 @@
   {
     "id": "gradehorarios",
     "title": "gradehorarios.com.br",
-    "description": "Tool for managing and sharing class schedules",
+    "description": "Ferramenta para montar e compartilhar horários de aula, com interface simples e gestão de grades.",
     "tags": ["React", "Spring Boot", "PostgreSQL"],
     "url": "https://gradehorarios.com.br"
   },
   {
     "id": "fazrota",
     "title": "fazrota.com.br",
-    "description": "Route planning and logistics management platform",
-    "tags": ["Angular", "Spring Boot", "PostgreSQL"],
+    "description": "Plataforma de gestão de entregadores e rotas para restaurantes, com cardápio online, planejamento de rotas e acompanhamento de entregas.",
+    "tags": ["Java", "Spring Boot", "React", "PostgreSQL", "Docker"],
     "url": "https://fazrota.com.br"
+  },
+  {
+    "id": "vgandolfi",
+    "title": "vgandolfi.dev",
+    "description": "Portfólio pessoal em produção, com apresentação profissional, experiência, habilidades, projetos, formação e contato.",
+    "tags": ["React Router", "Tailwind CSS", "daisyUI"],
+    "url": "https://vgandolfi.dev"
   }
 ]

@@ -118,7 +118,7 @@ export default function ProjectsSection() {
         {/* Section header */}
         <div ref={headerRef} className="opacity-0 text-center mb-16">
           <span className="text-primary font-medium text-sm tracking-widest uppercase">
-            Projects
+            Projetos
           </span>
           <h2 className="font-display text-3xl md:text-4xl font-bold mt-3">
             Projetos em{" "}
@@ -128,7 +128,7 @@ export default function ProjectsSection() {
         </div>
 
         {/* Project cards */}
-        <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {(projects as Project[]).map((project, idx) => (
             <ProjectCard key={project.id} project={project} index={idx} />
           ))}

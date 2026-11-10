@@ -2,9 +2,9 @@ import React, { useEffect, useRef } from "react";
 
 const skillCategories = [
   {
-    title: "Languages",
+    title: "Linguagens",
     icon: "code",
-    skills: ["Java (11, 17, 21)", "TypeScript", "Python"],
+    skills: ["Java 11/17/21", "TypeScript", "Python"],
   },
   {
     title: "Frameworks",
@@ -12,6 +12,7 @@ const skillCategories = [
     skills: [
       "Spring Boot (Data, Security, MVC, Cloud)",
       "Angular",
+      "React",
       "Apache Camel",
     ],
   },
@@ -21,19 +22,14 @@ const skillCategories = [
     skills: ["Kafka", "RabbitMQ", "Redis"],
   },
   {
-    title: "Databases",
+    title: "Bancos de Dados",
     icon: "database",
     skills: ["PostgreSQL", "MySQL", "MongoDB"],
   },
   {
-    title: "DevOps & Tools",
+    title: "DevOps & Ferramentas",
     icon: "tool",
     skills: ["Docker", "Docker Compose", "Git", "Linux", "APIs REST"],
-  },
-  {
-    title: "AI & Productivity",
-    icon: "cpu",
-    skills: ["GitHub Copilot", "Cloud Code", "Inteligência Artificial"],
   },
 ];
 
@@ -61,11 +57,6 @@ const iconMap: Record<string, React.JSX.Element> = {
   tool: (
     <svg className="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
       <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17l-5.5 5.5a2.121 2.121 0 01-3-3l5.5-5.5m4.34-4.34L16.5 3.75a2.121 2.121 0 013 3l-5.5 5.5m-4.34 4.34l2.5 2.5a2.121 2.121 0 003-3l-2.5-2.5M9.75 5.25l-2.5-2.5A2.121 2.121 0 004.25 9.75l2.5 2.5" />
-    </svg>
-  ),
-  cpu: (
-    <svg className="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25A2.25 2.25 0 015.25 3h13.5A2.25 2.25 0 0121 5.25z" />
     </svg>
   ),
 };
@@ -156,7 +147,7 @@ export default function SkillsSection() {
         {/* Section header */}
         <div ref={headerRef} className="opacity-0 text-center mb-16">
           <span className="text-primary font-medium text-sm tracking-widest uppercase">
-            Skills
+            Habilidades
           </span>
           <h2 className="font-display text-3xl md:text-4xl font-bold mt-3">
             Minhas{" "}

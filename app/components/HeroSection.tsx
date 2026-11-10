@@ -4,12 +4,14 @@ export default function HeroSection() {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
+  const actionsRef = useRef<HTMLDivElement>(null);
   const socialRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const t = titleRef.current;
     const s = subtitleRef.current;
     const c = ctaRef.current;
+    const a = actionsRef.current;
     const so = socialRef.current;
 
     const observer = new IntersectionObserver(
@@ -28,6 +30,10 @@ export default function HeroSection() {
               c.classList.add("animate-fade-in-up");
               c.style.opacity = "1";
             }
+            if (entry.target === a) {
+              a.classList.add("animate-fade-in-up");
+              a.style.opacity = "1";
+            }
             if (entry.target === so) {
               so.classList.add("animate-fade-in");
               so.style.opacity = "1";
@@ -38,7 +44,7 @@ export default function HeroSection() {
       { threshold: 0.1 }
     );
 
-    [t, s, c, so].forEach((el) => el && observer.observe(el));
+    [t, s, c, a, so].forEach((el) => el && observer.observe(el));
     return () => observer.disconnect();
   }, []);
 
@@ -65,7 +71,7 @@ export default function HeroSection() {
             <span className="animate-ping absolute inline-flex size-full rounded-full bg-primary opacity-75" />
             <span className="relative inline-flex size-2 rounded-full bg-primary" />
           </span>
-          Aqui está o pulo do gato 🐱
+          Disponível para oportunidades
         </div>
 
         {/* Main heading */}
@@ -81,16 +87,17 @@ export default function HeroSection() {
           ref={ctaRef}
           className="opacity-0 text-lg sm:text-xl md:text-2xl text-base-content/60 max-w-2xl mx-auto mb-4 font-light"
         >
-          Full-Stack Developer
+          Desenvolvedor Backend Java
         </p>
         <p
           className="text-base sm:text-lg text-base-content/50 max-w-xl mx-auto mb-10 font-light"
         >
-          Java • Spring Boot • Angular • Microsserviços
+          Spring Boot • Microsserviços • Angular e React
         </p>
 
         {/* CTA Buttons */}
         <div
+          ref={actionsRef}
           className="opacity-0 flex flex-wrap gap-4 justify-center mb-12"
         >
           <a
@@ -100,7 +107,7 @@ export default function HeroSection() {
             <svg className="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
               <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
             </svg>
-            View Projects
+            Ver projetos
           </a>
           <a
             href="#contact"
@@ -109,7 +116,7 @@ export default function HeroSection() {
             <svg className="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
               <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
-            Get in Touch
+            Falar comigo
           </a>
         </div>
 
@@ -146,7 +153,7 @@ export default function HeroSection() {
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
         <div className="flex flex-col items-center gap-2 text-base-content/30">
-          <span className="text-xs font-medium tracking-widest uppercase">Scroll</span>
+          <span className="text-xs font-medium tracking-widest uppercase">Rolar</span>
           <svg className="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
             <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
           </svg>

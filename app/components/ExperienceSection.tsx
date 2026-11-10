@@ -4,25 +4,33 @@ const experiences = [
   {
     role: "Desenvolvedor Java",
     company: "PwC DTS",
-    period: "2025 – Atual",
+    period: "10/2025 – Atual",
     description:
-      "Desenvolvimento de APIs REST e integrações com Java 21, Spring Boot e Apache Camel em arquitetura orientada a eventos no ramo de seguros.",
+      "Desenvolvimento de APIs REST e integrações com Java 21, Spring Boot e Apache Camel para clientes de seguros e previdência. Implementação de rotas de integração, tratamento de erros e resiliência entre sistemas corporativos. Mensageria com RabbitMQ e arquitetura orientada a eventos, com foco em processamento assíncrono.",
     tags: ["Java 21", "Spring Boot", "Apache Camel", "RabbitMQ"],
   },
   {
-    role: "Desenvolvedor Fullstack",
-    company: "Petrobras (Labsid/USP)",
-    period: "2024 – 2025",
+    role: "Consultor de Logística e Automação",
+    company: "Consultoria Independente (PJ)",
+    period: "06/2025 – 09/2025",
     description:
-      "Sistema SSD para gestão de recursos hídricos. Dashboards e interfaces com Angular e TailwindCSS além de integrações com REST APIs.",
-    tags: ["Angular", "Java 11", "Spring Boot", "TailwindCSS", "Kafka"],
+      "Consultoria em logística para a INPO, com análise de processos e automação de rotinas. Apoio à operação logística e melhoria de fluxos.",
+    tags: ["Automação", "Logística", "Análise de Processos"],
   },
   {
-    role: "Analista de Dados",
-    company: "Unicamp & Correios",
-    period: "2023",
+    role: "Desenvolvedor Fullstack",
+    company: "Labsid (projeto Petrobras/SSD)",
+    period: "05/2024 – 05/2025",
     description:
-      "Pesquisa em otimização logística com Python, modelos de IA e Pesquisa Operacional para previsão de demanda e rotas.",
+      "Desenvolvimento do SSD, sistema de gestão estratégica de recursos hídricos, em consultoria para a Petrobras. APIs REST com Java 11, Spring Boot, Spring Data JPA e Spring Security. Interfaces e dashboards com Angular, Tailwind, HTML, CSS e TypeScript. Integrações síncronas e assíncronas com mensageria.",
+    tags: ["Java 11", "Spring Boot", "Angular", "TailwindCSS", "Kafka"],
+  },
+  {
+    role: "Bolsista de Pesquisa (Logística e Dados)",
+    company: "Unicamp & Correios",
+    period: "01/2024 – 12/2024 (bolsa parcial)",
+    description:
+      "Pesquisa aplicada a processos logísticos com IA e pesquisa operacional. Modelos em Python (Pandas, Scikit-learn, TensorFlow e OR-Tools) para previsão, detecção de falhas e otimização de rotas.",
     tags: ["Python", "Pandas", "Scikit-learn", "OR-Tools"],
   },
 ];
@@ -52,14 +60,14 @@ export default function ExperienceSection() {
       <div className="container mx-auto px-4 max-w-5xl">
         <div ref={sectionRef} className="opacity-0 text-center mb-12">
           <span className="text-primary font-medium text-sm tracking-widest uppercase">
-            Experience
+            Experiência
           </span>
           <h2 className="font-display text-3xl md:text-4xl font-bold mt-3">
             Onde já <span className="gradient-text">trabalhei</span>
           </h2>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2">
           {experiences.map((exp, idx) => (
             <div
               key={idx}

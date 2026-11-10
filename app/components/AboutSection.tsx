@@ -1,9 +1,9 @@
 import { useEffect, useRef } from "react";
 
 const highlights = [
-  { label: "Location", value: "Limeira - SP" },
-  { label: "Experience", value: "2+ Years" },
-  { label: "Focus", value: "Full Stack Java" }
+  { label: "Local", value: "Limeira - SP" },
+  { label: "Experiência", value: "2+ anos" },
+  { label: "Foco", value: "Backend Java" }
 ];
 
 export default function AboutSection() {
@@ -42,7 +42,7 @@ export default function AboutSection() {
         {/* Section header */}
         <div className="text-center mb-16">
           <span className="text-primary font-medium text-sm tracking-widest uppercase">
-            About Me
+            Sobre mim
           </span>
           <h2 className="font-display text-3xl md:text-4xl font-bold mt-3">
             Conheça um pouco da minha{" "}
@@ -59,10 +59,7 @@ export default function AboutSection() {
           {/* Professional summary */}
           <div className="bg-base-200/50 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-base-content/5 mb-10">
             <p className="text-lg leading-relaxed text-base-content/80">
-              Desenvolvedor Full Stack com foco em ecossistema Java (Spring Boot) e Angular.
-              Experiência em arquiteturas de microsserviços, mensageria e integração de APIs.
-              Vivência em projetos complexos utilizando Design Patterns, DDD, arquitetura
-              orientada a eventos, metodologias ágeis e CI/CD.
+              Desenvolvedor Backend Java com experiência em Spring Boot, microsserviços, APIs REST e integrações. Atualmente na PwC, com Java 21, Apache Camel, RabbitMQ e arquitetura orientada a eventos para clientes de seguros e previdência. Vivência full stack com Angular e React, experiência na área de logística e no setor de seguradoras.
             </p>
           </div>
 

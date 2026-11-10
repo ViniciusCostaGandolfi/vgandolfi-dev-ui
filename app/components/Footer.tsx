@@ -51,6 +51,16 @@ const contactLinks = [
       </svg>
     ),
   },
+  {
+    label: "FazRota",
+    href: "https://fazrota.com.br",
+    value: "fazrota.com.br",
+    icon: (
+      <svg className="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+      </svg>
+    ),
+  },
 ];
 
 export default function Footer() {
@@ -84,7 +94,7 @@ export default function Footer() {
         {/* Section header */}
         <div className="text-center mb-12">
           <span className="text-primary font-medium text-sm tracking-widest uppercase">
-            Contact
+            Contato
           </span>
           <h2 className="font-display text-3xl md:text-4xl font-bold mt-3">
             Vamos{" "}
@@ -123,7 +133,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-base-content/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-base-content/40">
-            © {currentYear} Vinícius Costa Gandolfi. All rights reserved.
+            © {currentYear} Vinícius Costa Gandolfi. Todos os direitos reservados.
           </p>
 
           <div className="flex items-center gap-4">

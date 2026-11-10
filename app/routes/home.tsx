@@ -11,17 +11,17 @@ import Footer from "~/components/Footer";
 export function meta({}: Route.MetaArgs) {
   return [
     {
-      title: "Vinícius Costa Gandolfi - Full Stack Developer | Java, Spring Boot & Angular",
+      title: "Vinícius Costa Gandolfi — Desenvolvedor Backend Java | Spring Boot, Microsserviços e Angular",
     },
     {
       name: "description",
       content:
-        "Full Stack Developer specializing in Java, Spring Boot, Angular and microservices. Check out my portfolio with projects and professional experience.",
+        "Desenvolvedor Backend Java na PwC, com Java 21, Spring Boot, Apache Camel, RabbitMQ e arquitetura orientada a eventos. Vivência full stack com Angular e React. Projetos em produção: fazrota.com.br e gradehorarios.com.br.",
     },
     {
       name: "keywords",
       content:
-        "Java, Spring Boot, Angular, Full Stack, Developer, Portfolio, Microservices",
+        "Java, Spring Boot, Microsserviços, Apache Camel, RabbitMQ, Kafka, Angular, React, Backend, Desenvolvedor, Portfólio",
     },
   ];
 }
